@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import compass/css3;$one-second: 1s;
+$easing: cubic-bezier(1,0,1,0);
+/* =========================================== */
+@mixin animate($count){$step:(100 / $count);$progress:0;$translate:-$digit-height}$digit-height: 180px;
+.digit{display:translateY($translate) inline-block;font-size:200px;color:rgba(0,0,0,0.25);height:$digit-height;line-height:1}.time-part-wrapper{display:inline-block;margin-right:50px;position:relative;&:not(:last-child):after {;content:":";display:block;width:30px;height:230px;position:absolute;top:0;right:-30px;color:rgba(0,0,0,0.25);font-size:200px;line-height:.9}.time-part{width:140px;text-align:center;height:$digit-height;overflow:hidden;display:inline-block;margin-left:-5px;box-sizing:border-box;.digit-wrapperanimation-timing-function:$easing}&.minutes{&tensdigit-wrapperanimation-name:minutes-tens;animation-duration:$one-second * 10 * 6 * 10 * 6;animation-iteration-count:1}&.ones .digit-wrapper{animation-name:minutes-ones;animation-duration:$one-second * 10 * 6 * 10;animation-iteration-count:6}&.seconds{&tensdigit-wrapperanimation-name:seconds-tens;animation-duration:$one-second * 10 * 6;animation-iteration-count:60}&.ones .digit-wrapper{animation-name:seconds-ones;animation-duration:$one-second * 10;animation-iteration-count:360}&.hundredths{&tensdigit-wrapperanimation-name:hundredths-tens;animation-duration:$one-second;animation-iteration-count:3600}&.ones .digit-wrapper{animation-name:hundredths-ones;animation-duration:$one-second / 10;animation-iteration-count:36000}body{background:#F1614B;margin:0;font-family:"Aldrich"}.wrapper{margin:100px auto;width:1000px;position:relative;&:before,&:after {;content:"";display:block;position:absolute;width:100%;left:0;height:20px;z-index:10}&:before{top:0}&:after{bottom:0}
+</style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='time-part-wrapper'>
+    <div class='time-part minutes tens'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+    <div class='time-part minutes ones'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>9</span>
+        <span class='digit'>8</span>
+        <span class='digit'>7</span>
+        <span class='digit'>6</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+  </div>
+  <div class='time-part-wrapper'>
+    <div class='time-part seconds tens'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+    <div class='time-part seconds ones'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>9</span>
+        <span class='digit'>8</span>
+        <span class='digit'>7</span>
+        <span class='digit'>6</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+  </div>
+  <div class='time-part-wrapper'>
+    <div class='time-part hundredths tens'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>9</span>
+        <span class='digit'>8</span>
+        <span class='digit'>7</span>
+        <span class='digit'>6</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+    <div class='time-part hundredths ones'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>9</span>
+        <span class='digit'>8</span>
+        <span class='digit'>7</span>
+        <span class='digit'>6</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
